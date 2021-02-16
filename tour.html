@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="tour.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <a class="logo" href="#">Guided Tours</a>
+            <nav>
+                <a href="#">Tours</a>
+                <a href="#">Pricing</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div id="intro">
+        <div class="cta container">
+            <img class="splash" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/adventure-splash.svg" alt="">
+            <h1>Explore and Discover</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, tempore inventore rem architecto, dolorum beatae, molestiae sapiente pariatur quaerat quam quo cum itaque nobis eius dolores facilis vitae temporibus nulla.</p>
+            <a class="button" href="">
+                <span>Start your adventure</span>
+            </a>
+        </div>
+    </div>
+    <!--  intro 끝 -->
+    
+    <div id="tours">
+        <div class="container">
+            <h2>Where would you like to go?</h2>
+            <form action="#">
+                <input id="location" type="text" placeholder="location">
+                <button class="button" type="submit">Get Moving</button>
+            </form>
+        </div>
+        <ul>
+            <li>
+                <div>
+                    <h3>Denali</h3>
+                    <h4>Alaska</h4>
+                </div>
+                <img src="./images/denali_alaska.jpg" alt="Denali Alaska">
+            </li>
+            <li>
+                <div>
+                    <h3>Mirror Lake</h3>
+                    <h4>California</h4>
+                </div>
+                <img src="./images/mirror-lake_california.jpg" alt="Mirror Lake California">
+            </li>
+            <li>
+                <div>
+                    <h3>Antelope Canyon</h3>
+                    <h4>Arizona</h4>
+                </div>
+                <img src="./images/antelope-canyon_arizona.jpg" alt="Antelope Canyon Arizona">
+            </li>
+            <li>
+                <div>
+                    <h3>Keywest</h3>
+                    <h4>Florida</h4>
+                </div>
+                <img src="./images/key-west_florida.jpg" alt="Keywest Florida">
+            </li>
+            <li>
+                <div>
+                    <h3>Saint Mary Lake</h3>
+                    <h4>Montana</h4>
+                </div>
+                <img src="./images/saint-mary-lake_montana.jpg" alt="Saint Mary Lake Montana">
+            </li>
+            <li>
+                <div>
+                    <h3>Moab</h3>
+                    <h4>Utah</h4>
+                </div>
+                <img src="./images/moab_utah.jpg" alt="Moab Utah">
+            </li>
+            <li>
+                <div>
+                    <h3>Waipio Valley</h3>
+                    <h4>Hawaii</h4>
+                </div>
+                <img src="./images/waipio-valley_hawaii.jpg" alt="Waipio Valley Hawaii">
+            </li>
+            <li>
+                <div>
+                    <h3>Carlsbad Caverns</h3>
+                    <h4>New Mexico</h4>
+                </div>
+                <img src="./images/carlsbad-caverns_new-mexico.jpg" alt="Carlsbad Caverns New Mexico">
+            </li>
+        </ul>
+        
+    </div>
+    <!--tours 끝-->
+    
+    <div class="container" id="pricing">
+       <article>
+           <h3>Trip 1</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus magnam, ab, laborum eaque ad nam voluptates non excepturi id optio suscipit odit sapiente.</p>
+           <a class="button" href="#"><span> Learn More </span></a>
+       </article>
+        <article>
+           <h3>Trip 2</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus magnam, ab, laborum eaque ad nam voluptates non excepturi id optio suscipit odit sapiente.</p>
+           <a class="button" href="#"><span> Learn More </span></a>
+       </article>
+        <article>
+           <h3>Trip 3</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus magnam, ab, laborum eaque ad nam voluptates non excepturi id optio suscipit odit sapiente.</p>
+           <a class="button" href="#"><span> Learn More </span></a>
+       </article>
+    </div>
+    <!-- container 끝 -->
+    
+    <div id="main-footer">
+        <p> &copy; 2020 </p>
+    </div>
+
+
+    <script type="text/javascript" src="tour.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script>
+        $('.cta a').click(function() {
+            $('html,body').animate({
+                scrollTop:
+                $('#tours').offset().top
+            }, 500);
+            return false;
+        });
+
+        $('#tours li').on('click', function() {
+            $('#location').val($('img', this).attr('alt'));
+        });
+    </script>
+</body>
+</html>
